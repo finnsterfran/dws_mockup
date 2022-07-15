@@ -1,0 +1,166 @@
+:root {
+    --hover-width: 70%;
+    --other-width: 30%;
+    --speed: 1000ms;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.split h1 {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    border: white solid 0.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 16rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.split.left .btn:hover{
+    background-color: rgba(192, 192, 192, 1);
+    border:rgba(192, 192, 192, 1);
+    color: cornflowerblue;
+}
+
+.split.right .btn:hover {
+    background-color: rgba(128, 128, 128, 1);
+    border: rgba(128, 128, 128, 1);
+    color: purple;
+}
+header {
+    height: 6%;
+    background-color: orange;
+    padding: 0 4rem;
+}
+.split-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background: #333;
+}
+
+.footer-container {
+    height: 24%;
+}
+
+.footer-box {
+    height: 100%;
+}
+
+.fbox {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-box1 {
+    background-color: darkolivegreen;
+}
+
+.f-box2 {
+    background-color:dodgerblue;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+   
+}
+
+.split.left {
+    left: 0;
+    background: url('./odoo.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50% 35%;
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 192, 192, 0.4);
+}
+
+.split.right {
+    right: 0;
+    background: url('./java.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% 35%;
+}
+.split.right::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.split.right, 
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all var(--speed) ease-in-out;
+}
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 2.8rem;
+        
+    }
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+        text-align: center;
+    }
+}
+
