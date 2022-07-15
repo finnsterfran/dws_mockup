@@ -15,15 +15,16 @@ body {
     margin: 0;
 }
 
-.split h1 {
-    font-size: 2rem;
+.text-box {
     color: white;
     position: absolute;
+    width: 80%;
     left: 50%;
-    top: 65%;
+    top: 55%;
     transform: translateX(-50%);
-    white-space: nowrap;
+    white-space: wrap;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .button {
@@ -32,16 +33,16 @@ body {
     align-items: center;
     justify-content: center;
     left: 50%;
-    top: 75%;
+    top: 96%;
     transform: translateX(-50%);
     text-decoration: none;
     color: white;
     border: white solid 0.2rem;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 16rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 5px;
 }
 
@@ -104,7 +105,7 @@ header {
     background: url('./odoo.png');
     background-repeat: no-repeat;
     background-size: 60%;
-    background-position: 50% 35%;
+    background-position: 50% 25%;
 }
 
 .split.left::before {
@@ -119,8 +120,8 @@ header {
     right: 0;
     background: url('./java.png');
     background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 35%;
+    background-size: 60%;
+    background-position: 50% 15%;
 }
 .split.right::before {
     content: "";
@@ -142,14 +143,17 @@ header {
 
 .hover-left .right {
     width: var(--other-width);
+    font-size: 60%;
 }
 
 .hover-right .right {
     width: var(--hover-width);
+    background-position: 50% 5%;
 }
 
 .hover-right .left {
     width: var(--other-width);
+    font-size: 60%;
 }
 
 @media(max-width: 800px) {
